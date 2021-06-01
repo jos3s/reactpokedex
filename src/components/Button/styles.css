@@ -1,0 +1,12 @@
+.button{
+    width:95%;
+    background: #78909C;
+    color:white;
+    padding:15px 30px;
+    border:none;
+}
+
+.button:disabled{
+    background-color: #B0BEC5;
+    cursor: not-allowed;
+}
