@@ -9,6 +9,7 @@ import { Button } from "../../components/Button";
 import { TextInput } from "../../components/TextInput";
 
 const Home = () => {
+	document.title = "Pokédex - Jos3s";
 	const [pokemons, setPokemons] = useState([]);
 	const [allPokemons, setAllPokemons] = useState([]);
 	const [page, setPage] = useState(0);
