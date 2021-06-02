@@ -23,23 +23,3 @@ code {
   max-width:1800px;
   margin:0 auto;
 }
-
-.button-container{
-  height: 100px;
-  display:flex;
-  align-items: flex-end;
-  gap:20px;
-}
-
-.search-container{
-  margin:30px 0;
-}
-
-.search-container h2{
-  margin-bottom: 0;
-}
-
-.search-container p{
-  font-size:13px;
-  margin-bottom: 20px;
-}

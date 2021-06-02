@@ -4,9 +4,9 @@ import { Card } from "./../Card";
 
 export const Cards = ({ pokemons }) => (
 	<div className="cards">
-		{pokemons.map((pokemon) => (
+		{pokemons.map((pokemon,  idx) => (
 			<Card
-				key={pokemon.id}
+				key={pokemon.name}
 				name={pokemon.name}
 				cover={pokemon.cover}
 				id={pokemon.id}

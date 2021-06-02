@@ -15,6 +15,7 @@ const Home = () => {
 	const [page, setPage] = useState(0);
 	const [pokemonsPerPage] = useState(5);
 	const [searchValue, setSearchValue] = useState("");
+	const [filter, setFilter] = useState("name");
 
 	const numPokemonsAPI = 889;
 	const noNextPokemons = page + pokemonsPerPage === numPokemonsAPI;
@@ -22,9 +23,18 @@ const Home = () => {
 
 	const filteredPokemons = !!searchValue
 		? allPokemons.filter((pokemon) => {
+			if (filter === "name") {
 				return pokemon.name
 					.toLowerCase()
 					.includes(searchValue.toLowerCase());
+			}  else if (filter === "id") {
+				return pokemon.id.toString().includes(searchValue);
+			} else {
+				return pokemon.types
+					.join(" ")
+					.toLowerCase()
+					.includes(searchValue.toLowerCase());
+			}
 		  })
 		: pokemons;
 
@@ -41,6 +51,7 @@ const Home = () => {
 
 		setPokemons(pokemons);
 		setPage(nextPage);
+		setAllPokemons(pokemons);
 	};
 
 	const loadLessPokemons = () => {
@@ -54,6 +65,11 @@ const Home = () => {
 	const handleChangeSearchValue = (e) => {
 		const { value } = e.target;
 		setSearchValue(value);
+	};
+	const handleChangeFilter = (e) => {
+		const { value } = e.target;
+		console.log(value);
+		setFilter(value);
 	};
 
 	useEffect(() => {
@@ -81,6 +97,38 @@ const Home = () => {
 					searchValue={searchValue}
 					handleChange={handleChangeSearchValue}
 				/>
+
+				<div onChange={handleChangeFilter} className="filter-container">
+					<p>Search for:</p>
+					<label htmlFor="radio-name">
+						Name
+						<input
+							type="radio"
+							name="filter"
+							value="name"
+							id="radio-name"
+							defaultChecked={filter === "name"}
+						/>
+					</label>
+					<label htmlFor="radio-ID">
+						ID
+						<input
+							type="radio"
+							name="filter"
+							value="id"
+							id="radio-ID"
+						/>
+					</label>
+					<label htmlFor="radio-type">
+						Type
+						<input
+							type="radio"
+							name="filter"
+							value="type"
+							id="radio-type"
+						/>
+					</label>
+				</div>
 			</div>
 			{filteredPokemons.length > 0 && (
 				<Cards pokemons={filteredPokemons}></Cards>

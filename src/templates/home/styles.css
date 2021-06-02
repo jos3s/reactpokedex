@@ -5,3 +5,50 @@
   background:#eee;
   padding:20px;
 }
+
+.button-container{
+  height: 100px;
+  display:flex;
+  align-items: flex-end;
+  gap:20px;
+}
+
+.search-container{
+  margin:30px 0;
+}
+
+.search-container h2{
+  margin-bottom: 0;
+}
+
+.search-container p{
+  font-size:13px;
+  margin-bottom: 20px;
+}
+
+.filter-container{
+  margin:.8rem 0 1.5em 0rem;
+  display:flex;
+  align-items: center;
+  gap:10px;
+}
+
+.search-container .filter-container p{
+  margin:0 0;
+  font-size:15px;
+}
+
+.search-container .filter-container label{
+  font-size:15px;
+}
+
+.search-container .filter-container label{
+  display:flex;
+  align-items:center;
+  gap:5px;
+}
+
+.search-container .filter-container label input{
+  margin-top:2px;
+}
+
