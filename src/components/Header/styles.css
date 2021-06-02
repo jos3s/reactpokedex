@@ -1,5 +1,14 @@
+.box{
+	height:80px;
+	display:flex;
+	align-items:center;
+}
+
+img#pokedex{
+	height:80px;
+}
+
 h1{
-  margin-bottom:.2rem;
   font-size:3em;
 }
 
