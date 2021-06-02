@@ -36,13 +36,14 @@ export const Header = () => (
 				<h1 className={"h1-" + types[num]}>Pokédex</h1>
 				<p>
 					by{" "}
-					<a href="https://www.linkedin.com/in/jos3s/" alt="Linkedin">
+					<a href="https://www.linkedin.com/in/jos3s/" alt="Linkedin" title="Linkedin" >
 						<b>José Ulisses</b>
 					</a>{" "}
 					with{" "}
 					<a
-						href="https://www.flaticon.com/br/autores/roundicons-freebies"
-						title="Pokeapi"
+						href="https://pokeapi.co/"
+						alt="PokeAPI"
+						title="PokeAPI"
 					>
 						<b>PokeAPI</b>
 					</a>
@@ -50,6 +51,7 @@ export const Header = () => (
 					<a
 						href="https://github.com/jos3s/reactpokedex"
 						alt="Github"
+						title="Github"
 					>
 						{" "}
 						<b>Github</b>
