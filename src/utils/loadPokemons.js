@@ -18,11 +18,18 @@ export const loadPokemon = async (page, postsPerPage) => {
 
 	const infos = await Promise.all(infoPokemons);
 
+	const statistics = infos.map(({ stats }) => {
+		return stats.map(({ base_stat, stat }) => {
+			return { name: stat.name, value: base_stat };
+		});
+	});
+
 	const pokemons = infos.map(({ name, types, id }, idx) => {
 		return {
 			id,
 			name,
 			types: types.map((types) => types.type.name),
+			stats: statistics[idx],
 			cover: photosPokemon[idx],
 		};
 	});

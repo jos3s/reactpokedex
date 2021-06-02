@@ -1,3 +1,5 @@
 import "./styles.css";
 
-export const Tag = ({ type }) => <div className={`tag ${type}`}>{type}</div>;
+export const Tag = ({ type, children }) => (
+	<div className={`tag ${type}`}>{children}</div>
+);

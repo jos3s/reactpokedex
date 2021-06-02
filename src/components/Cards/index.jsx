@@ -11,6 +11,7 @@ export const Cards = ({ pokemons }) => (
 				cover={pokemon.cover}
 				id={pokemon.id}
 				types={pokemon.types}
+				stats={pokemon.stats}
 			/>
 		))}
 	</div>
