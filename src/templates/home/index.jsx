@@ -134,7 +134,9 @@ const Home = () => {
 				<Cards pokemons={filteredPokemons}></Cards>
 			)}
 
-			{filteredPokemons.length === 0 && <p>Your search found no posts</p>}
+			{filteredPokemons.length === 0 && (
+				<p>Your search found no pokémons</p>
+			)}
 
 			<div className="button-container">
 				{!searchValue && (

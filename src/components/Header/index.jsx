@@ -35,18 +35,18 @@ export const Header = () => (
 			<div>
 				<h1 className={"h1-" + types[num]}>Pokédex</h1>
 				<p>
-					por{" "}
+					by{" "}
 					<a href="https://www.linkedin.com/in/jos3s/" alt="Linkedin">
 						<b>José Ulisses</b>
 					</a>{" "}
-					com{" "}
+					with{" "}
 					<a
 						href="https://www.flaticon.com/br/autores/roundicons-freebies"
 						title="Pokeapi"
 					>
 						<b>PokeAPI</b>
 					</a>
-					, em 2021 -
+					, in 2021 -
 					<a
 						href="https://github.com/jos3s/reactpokedex"
 						alt="Github"
