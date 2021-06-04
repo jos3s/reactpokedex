@@ -3,7 +3,7 @@
     href="https://www.flaticon.com/br/autores/roundicons-freebies"
     title="Roundicons Freebies"
   >
-    <img src="./.github/pokedex.svg" alt="Pokédex" id="pokedex" style="width:60px" />
+    <img src="./.github/pokedex.svg" alt="Pokédex" id="pokedex" width="100px" />
   </a>
   <h1>Pokedex</h1>
 </div>
