@@ -1,28 +1,40 @@
-.box{
-	height:80px;
-	display:flex;
-	align-items:center;
+.box {
+	height: 80px;
+	display: flex;
+	align-items: center;
+	width: 100%;
 }
 
-img#pokedex{
-	height:80px;
+img#pokedex {
+	height: 80px;
 }
 
-h1{
-  font-size:3em;
+h1 {
+	font-size: 3em;
 }
 
-.header-contend{
-  margin-bottom:1em;
+.header-contend {
+	margin-bottom: 1em;
 }
 
-a{
-  text-decoration:none;
-  color:black;
+.header-text {
+	width: 100%;
 }
 
-.h1-grass{
-  color:#bbffc0;
+.header-title {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+a {
+	text-decoration: none;
+	color: (--theme-page-text);
+}
+
+.h1-grass {
+	color: #bbffc0;
 }
 
 .h1-steel {
@@ -37,7 +49,7 @@ a{
 	color: #ffec8d;
 }
 
-.h1-water, .h1-ice {
+.h1-water, .h1-h1-ice {
 	color: #b5e8ff;
 }
 

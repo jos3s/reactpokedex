@@ -30,14 +30,14 @@ export const Card = ({ name, id, cover, types, stats }) => (
 				<div className="card-tags  tag-stats">
 					{stats.map((stat, idx) => {
 						return idx < 3 ? (
-							<Tag type="normal" key={stat.name}>
-								<p alt={stat.name.split("-").join(" ")}>
-									{statName(stat.name)}: {stat.value}
-								</p>
-							</Tag>
-						) : (
-							<></>
-						);
+              <Tag type="stat" key={stat.name}>
+                <p alt={stat.name.split("-").join(" ")}>
+                  {statName(stat.name)}: {stat.value}
+                </p>
+              </Tag>
+            ) : (
+              <></>
+            );
 					})}
 				</div>
 			</div>

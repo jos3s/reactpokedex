@@ -1,8 +1,8 @@
 .container{
-  max-width: 1800px;
+  max-width: 100%;
   margin: 0 auto;
   min-height:100vh;
-  background:#eee;
+  background:var(--theme-page-bg);
   padding:20px;
 }
 
@@ -52,3 +52,25 @@
   margin-top:2px;
 }
 
+p, a, label{
+  color:var(--theme-page-text);
+}
+
+
+@media screen and (min-width: 800px) {
+  .container {
+    padding:3em 4em;
+  }
+} 
+
+@media screen and (min-width: 1100px) {
+  .container {
+    padding:3em 4em;
+  }
+} 
+
+@media screen and (min-width: 1500px) {
+  .container {
+    padding:3em 6em;
+  }
+} 

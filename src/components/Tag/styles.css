@@ -1,22 +1,28 @@
-.tag{
-  display: inline-block;
-  padding: .35em .6em;
-  font-weight: 700;
-  line-height: 1;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: 10rem;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  font-size: 100%;
-  outline: transparent solid 2px;
-  outline-offset: 2px;
-  margin:.4rem 0;
-  box-shadow:0 5px 8px rgba(0,0,0,0.03)
+.tag {
+	display: inline-block;
+	padding: .35em .6em;
+	font-weight: 700;
+	line-height: 1;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: 10rem;
+	transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+	font-size: 100%;
+	outline: transparent solid 2px;
+	outline-offset: 2px;
+	margin: .4rem 0;
+	box-shadow: 0 5px 8px rgba(0, 0, 0, 0.03);
+	color: var(--theme-tags-text);
 }
 
-.tag.grass{
-  background:#bbffc0;
+.stat {
+	background-color: var(--theme-tags-bg);
+	color: var(--theme-tags-text);
+}
+
+.tag.grass {
+	background: #bbffc0;
 }
 
 .tag.steel {
@@ -81,4 +87,72 @@
 
 .tag.ghost {
 	background-color: #618fa3;
+}
+
+.darker .tag.steel {
+	background-color: #50575b;
+}
+
+.darker .tag.fire {
+	background-color: rgb(102, 0, 0);
+}
+
+.darker .tag.grass {
+	background-color: #005c1c;
+}
+
+.darker .tag.electric {
+	background-color: #a58900;
+}
+
+.darker .tag.water, .tag.darker .tag.ice {
+	background-color: #00425f;
+}
+
+.darker .tag.ground {
+	background-color: #53310d;
+}
+
+.darker .tag.rock {
+	background-color: #50575b;
+}
+
+.darker .tag.fairy {
+	background-color: #5b1269;
+}
+
+.darker .tag.poison {
+	background-color: #312e6da6;
+}
+
+.darker .tag.bug {
+	background-color: #7e4d09;
+}
+
+.darker .tag.dragon {
+	background-color: #142a53;
+}
+
+.darker .tag.psychic {
+	background-color: #6b6d18;
+}
+
+.darker .tag.flying {
+	background-color: #430000;
+}
+
+.darker .tag.fighting {
+	background-color: #554421;
+}
+
+.darker .tag.normal {
+	background-color: #464b4e;
+}
+
+.darker .tag.dark {
+	background-color: #1d1d1db8;
+}
+
+.darker .tag.ghost {
+	background-color: #4a6f7f;
 }

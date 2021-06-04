@@ -10,6 +10,8 @@ import { TextInput } from "../../components/TextInput";
 
 const Home = () => {
 	document.title = "Pokédex - Jos3s";
+  const [theme, setTheme] = useState("light");
+
 	const [pokemons, setPokemons] = useState([]);
 	const [allPokemons, setAllPokemons] = useState([]);
 	const [page, setPage] = useState(0);
@@ -72,90 +74,85 @@ const Home = () => {
 		setFilter(value);
 	};
 
+  const handleChangeTheme = () => {
+    setTheme(theme === "light" ? "darker" : "light");
+  };
+
+
 	useEffect(() => {
 		handleLoadPokemons(0, pokemonsPerPage);
 	}, [handleLoadPokemons, pokemonsPerPage]);
 
 	return (
-		<section className="container ">
-			<Header />
-			<div className="search-container">
-				{!!searchValue && (
-					<>
-						<h2>Search: {searchValue}</h2>
-						{filteredPokemons.length > 0 ? (
-							<p>
-								<i> {filteredPokemons.length} pokémos finds</i>
-							</p>
-						) : (
-							<p></p>
-						)}
-					</>
-				)}
+    <section className={`container ${theme}`}>
+      <Header handleClick={handleChangeTheme} theme={theme} />
+      <div className="search-container">
+        {!!searchValue && (
+          <>
+            <h2>Search: {searchValue}</h2>
+            {filteredPokemons.length > 0 ? (
+              <p>
+                <i> {filteredPokemons.length} pokémos finds</i>
+              </p>
+            ) : (
+              <p></p>
+            )}
+          </>
+        )}
 
-				<TextInput
-					searchValue={searchValue}
-					handleChange={handleChangeSearchValue}
-				/>
+        <TextInput
+          searchValue={searchValue}
+          handleChange={handleChangeSearchValue}
+        />
 
-				<div onChange={handleChangeFilter} className="filter-container">
-					<p>Search for:</p>
-					<label htmlFor="radio-name">
-						Name
-						<input
-							type="radio"
-							name="filter"
-							value="name"
-							id="radio-name"
-							defaultChecked={filter === "name"}
-						/>
-					</label>
-					<label htmlFor="radio-ID">
-						ID
-						<input
-							type="radio"
-							name="filter"
-							value="id"
-							id="radio-ID"
-						/>
-					</label>
-					<label htmlFor="radio-type">
-						Type
-						<input
-							type="radio"
-							name="filter"
-							value="type"
-							id="radio-type"
-						/>
-					</label>
-				</div>
-			</div>
-			{filteredPokemons.length > 0 && (
-				<Cards pokemons={filteredPokemons}></Cards>
-			)}
+        <div onChange={handleChangeFilter} className="filter-container">
+          <p>Search for:</p>
+          <label htmlFor="radio-name">
+            <span>Name</span>
+            <input
+              type="radio"
+              name="filter"
+              value="name"
+              id="radio-name"
+              defaultChecked={filter === "name"}
+            />
+          </label>
+          <label htmlFor="radio-ID">
+            <span>ID</span>
+            <input type="radio" name="filter" value="id" id="radio-ID" />
+          </label>
+          <label htmlFor="radio-type">
+            <span>Type</span>
+            <input type="radio" name="filter" value="type" id="radio-type" />
+          </label>
+        </div>
+      </div>
+      {filteredPokemons.length > 0 && (
+        <Cards pokemons={filteredPokemons}></Cards>
+      )}
 
-			{filteredPokemons.length === 0 && (
-				<p>Your search found no pokémons</p>
-			)}
+      {filteredPokemons.length === 0 && <p>Your search found no pokémons</p>}
 
-			<div className="button-container">
-				{!searchValue && (
-					<>
-						<Button
-							onClick={loadLessPokemons}
-							text="Load less pokémons"
-							disabled={noPreviousPokemons}
-						/>
-						<Button
-							onClick={loadMorePokemons}
-							text="Load more pokémons"
-							disable={noNextPokemons}
-						/>
-					</>
-				)}
-			</div>
-		</section>
-	);
+      <div className="button-container">
+        {!searchValue && (
+          <>
+            <Button
+              onClick={loadLessPokemons}
+              text="Load less pokémons"
+              disabled={noPreviousPokemons}
+              type="secondary"
+            />
+            <Button
+              onClick={loadMorePokemons}
+              text="Load more pokémons"
+              disable={noNextPokemons}
+              type="primary"
+            />
+          </>
+        )}
+      </div>
+    </section>
+  );
 };
 
 export default Home;

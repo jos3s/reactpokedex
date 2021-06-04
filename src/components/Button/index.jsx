@@ -1,7 +1,7 @@
 import "./styles.css";
 
-export const Button = ({ text, onClick, disabled }) => (
-	<button onClick={onClick} className="button" disabled={disabled}>
-		{text}
-	</button>
+export const Button = ({ text, onClick, disabled, type }) => (
+  <button onClick={onClick} className={`button ${type}`} disabled={disabled}>
+    {text}
+  </button>
 );
