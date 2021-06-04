@@ -45,7 +45,7 @@ export const Header = ({ handleClick, theme }) => (
           </a>{" "}
           with{" "}
           <a
-            href="https://www.flaticon.com/br/autores/roundicons-freebies"
+            href="https://pokeapi.co"
             title="Pokeapi"
           >
             <b>PokeAPI</b>
