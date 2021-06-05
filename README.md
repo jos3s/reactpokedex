@@ -8,8 +8,8 @@
   <h1>Pokedex</h1>
 </div>
  <a
-    href="https://www.flaticon.com/br/autores/roundicons-freebies"
-    title="Roundicons Freebies"
+    href="https://jos3spokedex.netlify.app"
+    title="Pokédex"
   >
     <img src="./.github/web.png" alt="Pokédex" id="pokedex"/>
 </a>  
@@ -28,8 +28,9 @@ Esse projeto foi criado usando o ReactJS pelo [Create React App](https://github.
 - [x] Adicionar as estatísticas básicas dos pokémons
 - [x] Permitir buscar por tipo e id, alem do nome
 - [x] Adicionar um switch para o modo escuro
-
-## Executar localmente
+- [x] Salvar a escolha do tema no local storage
+- [x] Definir o tema com base no tema do sistema
+- [ ] Adicionar esqueleto de carregamento dos cards
 
 No diretório do projeto, você pode rodar:
 
