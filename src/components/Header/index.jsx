@@ -4,22 +4,21 @@ import pokedex from "./../../assets/pokedex.svg";
 import { ThemeButton } from "../ThemeButton";
 
 const types = [
-	"grass",
-	"steel",
-	"fire",
-	"electric",
-	"water",
-	"ground",
-	"rock",
-	"fairy",
-	"poison",
-	"bug",
-	"dragon",
-	"psychic",
-	"flying",
-	"fighting",
-	"dark",
-	"ghost",
+  "grass",
+  "steel",
+  "fire",
+  "electric",
+  "water",
+  "ground",
+  "rock",
+  "fairy",
+  "poison",
+  "bug",
+  "dragon",
+  "psychic",
+  "flying",
+  "fighting",
+  "ghost",
 ];
 
 const num = Math.floor(Math.random() * types.length + 1);
