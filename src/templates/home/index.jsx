@@ -5,17 +5,21 @@ import "./styles.css";
 import { Header } from "../../components/Header";
 import { Cards } from "../../components/Cards";
 import { loadPokemon } from "./../../utils/loadPokemons";
+import { getLocalTheme, setLocalTheme } from "./../../utils/themeLocalStorage";
 import { Button } from "../../components/Button";
 import { TextInput } from "../../components/TextInput";
 
 const Home = () => {
-	document.title = "Pokédex - Jos3s";
-  const [theme, setTheme] = useState("light");
+  document.title = "Pokédex - Jos3s";
+  
+  const localTheme = getLocalTheme();
+
+  const [theme, setTheme] = useState(localTheme);
 
 	const [pokemons, setPokemons] = useState([]);
 	const [allPokemons, setAllPokemons] = useState([]);
 	const [page, setPage] = useState(0);
-	const [pokemonsPerPage] = useState(5);
+	const [pokemonsPerPage] = useState(7);
 	const [searchValue, setSearchValue] = useState("");
 	const [filter, setFilter] = useState("name");
 
@@ -75,7 +79,9 @@ const Home = () => {
 	};
 
   const handleChangeTheme = () => {
-    setTheme(theme === "light" ? "darker" : "light");
+    const newTheme = theme === "light" ? "darker" : "light";
+    setLocalTheme(newTheme);
+    setTheme(newTheme);
   };
 
 
